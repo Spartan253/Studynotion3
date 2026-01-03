@@ -30,7 +30,7 @@ app.use(
     })
 );
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001","https://studynotion3-one.vercel.app"];
 app.use(
     cors({
         origin: allowedOrigins,
