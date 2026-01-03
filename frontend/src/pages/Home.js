@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import HighlightText from '../components/core/HomePage/HighlightText'
 import CTABUTTON from '../components/core/HomePage/CTABUTTON.js';
-import Banner from '../assets/Banner.mp4'
+// import Banner from '../assets/Banner.mp4'
 import CodeBlock from '../components/core/HomePage/CodeBlocks.js'
 import TimeLineSection from '../components/core/HomePage/TimeLineSection.js';
 import LearningLanguageSection from '../components/core/HomePage/LearningLanguageSection.js';
 import InstructorSection from '../components/core/HomePage/InstructorSection.js'
 export default function Home() {
+  const Banner =
+  "https://res.cloudinary.com/dqojeedmu/video/upload/v1766492634/codehelp/epb7wkv0e33hai6hmalc.mp4";
+
   return (
     <div className="bg-black">
       <div className="relative mx-auto flex flex-col w-11/12 items-center text-white justify-between">  
