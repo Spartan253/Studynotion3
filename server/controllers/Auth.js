@@ -38,7 +38,7 @@ exports.sendOtp = async (req, res) => {
         const result = await OTP.findOne({ otp: otp });
 
         while (result) {
-            otp = otpgenrator(6, {
+            otp = otpgenrator.generate(6, {
                 upperCaseAlphabets: false,
                 lowerCaseAlphabets: false,
                 specialChars: false,
@@ -53,7 +53,7 @@ exports.sendOtp = async (req, res) => {
         console.log(otpbody);
         //send otp email to the user
 
-        mailsender(email, "your otp", `<p>${otp}</p>`);
+       await  mailsender(email, "your otp", `<p>${otp}</p>`);
 
         //return 
         res.status(200).json({
