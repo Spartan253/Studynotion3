@@ -382,11 +382,11 @@ export default function Home() {
             <HighlightText text="Coding Skills" />
           </h1>
 
-          <p className="text-sm sm:text-base text-gray-300 mt-4">
+          {/* <p className="text-sm sm:text-base text-gray-300 mt-4">
             With our online coding courses, you can learn at your own pace,
             from anywhere in the world, and get access to hands-on projects,
             quizzes, and personalized feedback from instructors.
-          </p>
+          </p> */}
         </div>
 
         {/* CTA */}
