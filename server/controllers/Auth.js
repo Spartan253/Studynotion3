@@ -53,7 +53,17 @@ exports.sendOtp = async (req, res) => {
         console.log(otpbody);
         //send otp email to the user
 
-     mailsender(email, "Your OTP", `<p>${otp}</p>`)
+     mailsender(email, "Your OTP", 
+  `
+  <h2>Your StudyNotion OTP</h2>
+  <p>Hello 👋</p>
+  <p>Your One-Time Password is:</p>
+  <h1 style="letter-spacing:3px;">${otp}</h1>
+  <p>This OTP is valid for 5 minutes.</p>
+  <p>If you didn’t request this, ignore this email.</p>
+  <br/>
+  <p>— StudyNotion Team</p>
+  `)
   .then(() => console.log("OTP mail sent"))
   .catch(err => console.log("Mail error:", err));
 
