@@ -53,7 +53,10 @@ exports.sendOtp = async (req, res) => {
         console.log(otpbody);
         //send otp email to the user
 
-       await  mailsender(email, "your otp", `<p>${otp}</p>`);
+     mailsender(email, "Your OTP", `<p>${otp}</p>`)
+  .then(() => console.log("OTP mail sent"))
+  .catch(err => console.log("Mail error:", err));
+
 
         //return 
         res.status(200).json({
