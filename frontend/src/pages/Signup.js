@@ -177,9 +177,10 @@ export default function Signup() {
   function submitHandler(e) {
     e.preventDefault();
     dispatch(setSignupData(formdata));
-    dispatch(sendOtp(formdata.email, navigate));
-    toast.success("OTP sent successfully");
+    dispatch(sendOtp(formdata.email));
+    
     navigate("/verify-email");
+    toast.success("OTP sent successfully");
   }
 
   return (

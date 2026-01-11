@@ -8,7 +8,7 @@ import { resetpassword,auth } from "./apis";
 
 
 
-export function sendOtp(email,navigate){
+export function sendOtp(email){
   return async(dispatch)=>{
     dispatch(setLoading(true))
     try{
@@ -19,8 +19,7 @@ export function sendOtp(email,navigate){
     throw new Error(Response.data.message)
    }
    toast.success("Otp send succesfully")
-   navigate("/verify-email")
-
+  
     }
     catch(error){
       console.log("send api erorr ",error)
