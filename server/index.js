@@ -91,6 +91,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
   "https://studynotion3-ylbj.vercel.app",
+  
 ];
 
 app.use(
